@@ -6,6 +6,7 @@ A modern, responsive, single-page portfolio website for Kaustubh Mani, a B.Tech 
 Built with plain HTML, CSS and JavaScript: no framework and no build step.
 
 .
+
 ├── index.html            # Main single-page portfolio
 
 ├── certificates.html     # Category-based certificates gallery
