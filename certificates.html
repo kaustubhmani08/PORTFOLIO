@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Certificates — Kaustubh Mani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="bg-decor" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="grid-overlay"></div>
+</div>
+
+<header id="navbar" class="scrolled">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">KM</span>
+      <span class="brand-name">Kaustubh Mani</span>
+    </a>
+    <nav>
+      <a href="index.html#certifications">← Back to Portfolio</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="section" style="padding-top:140px;">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow" id="catEyebrow">Certificates</span>
+      <h2 id="catTitle"><span class="gradient-text">Certificates</span></h2>
+      <p class="section-sub" id="catSub">A growing collection of learning milestones.</p>
+    </div>
+
+    <div class="cert-gallery" id="certGallery"></div>
+
+    <div class="glass-card" style="margin-top:48px;text-align:center;">
+      <h3>More on the way</h3>
+      <p class="muted">New certificates are added as I complete each course and program.</p>
+      <a href="index.html#certifications" class="btn btn-primary" style="margin-top:12px;">Explore other categories</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <span class="brand-mark">KM</span>
+      <p>© <span id="year"></span> Kaustubh Mani.</p>
+    </div>
+    <nav><a href="index.html">Home</a></nav>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const DATA = {
+  ai: {
+    label: 'AI Tools',
+    icon: '🤖',
+    sub: 'Hands-on with modern AI tools, prompt engineering, and applied AI.',
+    certs: [
+      { title: 'Introduction to Generative AI', issuer: 'Google Cloud', date: '2025' },
+      { title: 'Prompt Engineering Essentials', issuer: 'OpenAI Academy', date: '2025' },
+    ],
+  },
+  python: {
+    label: 'Python',
+    icon: '🐍',
+    sub: 'Core Python programming, problem solving, and scripting.',
+    certs: [
+      { title: 'Python for Beginners', issuer: 'Coursera', date: '2024' },
+      { title: 'Python Data Structures', issuer: 'HackerRank', date: '2025' },
+    ],
+  },
+  c: {
+    label: 'C Programming',
+    icon: '⚙️',
+    sub: 'Foundational C — memory, pointers, and systems thinking.',
+    certs: [
+      { title: 'C Programming Fundamentals', issuer: 'NPTEL', date: '2024' },
+      { title: 'Problem Solving in C', issuer: 'Udemy', date: '2025' },
+    ],
+  },
+  web: {
+    label: 'HTML / CSS / JS',
+    icon: '🌐',
+    sub: 'Building responsive, interactive websites from the ground up.',
+    certs: [
+      { title: 'Responsive Web Design', issuer: 'freeCodeCamp', date: '2025' },
+      { title: 'JavaScript Essentials', issuer: 'Scaler Topics', date: '2025' },
+    ],
+  },
+  react: {
+    label: 'React',
+    icon: '⚛️',
+    sub: 'Component-based UIs, hooks, and modern front-end patterns.',
+    certs: [
+      { title: 'React — The Complete Guide', issuer: 'Udemy', date: '2025' },
+      { title: 'Modern React with Hooks', issuer: 'Coursera', date: '2025' },
+    ],
+  },
+};
+
+const params = new URLSearchParams(location.search);
+const key = params.get('cat');
+const data = DATA[key] || { label: 'Certificates', icon: '🎓', sub: 'Select a category from the portfolio.', certs: [] };
+
+document.title = data.label + ' Certificates — Kaustubh Mani';
+document.getElementById('catEyebrow').textContent = data.icon + '  ' + data.label;
+document.getElementById('catTitle').innerHTML = '<span class="gradient-text">' + data.label + '</span> Certificates';
+document.getElementById('catSub').textContent = data.sub;
+
+// Render: 2 real demo certs + 4 placeholder slots
+const gallery = document.getElementById('certGallery');
+const items = [...data.certs];
+while (items.length < 6) items.push(null);
+
+gallery.innerHTML = items.map((c, i) => {
+  if (c) {
+    return `
+      <article class="cert-card">
+        <div class="cert-img">
+          <div class="cert-img-inner">
+            <div class="cert-badge">${data.icon}</div>
+            <div class="cert-watermark">${data.label}</div>
+            <div class="cert-demo-label">Demo Certificate Image</div>
+          </div>
+        </div>
+        <div class="cert-meta">
+          <h3>${c.title}</h3>
+          <p class="muted">${c.issuer} · ${c.date}</p>
+        </div>
+      </article>`;
+  }
+  return `
+    <article class="cert-card placeholder">
+      <div class="cert-img empty">
+        <div class="cert-img-inner">
+          <div class="empty-icon">＋</div>
+          <div class="empty-text">Certificate slot</div>
+        </div>
+      </div>
+      <div class="cert-meta">
+        <h3>Coming Soon</h3>
+        <p class="muted">Future ${data.label} achievement</p>
+      </div>
+    </article>`;
+}).join('');
+</script>
+</body>
+</html>
