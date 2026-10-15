@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Kaustubh Mani — Future AI Engineer & Creative Tech Student</title>
+<meta name="description" content="Portfolio of Kaustubh Mani — Class 12 student passionate about AI, coding, and innovation. Future CSE student and aspiring AI engineer." />
+<meta name="author" content="Kaustubh Mani" />
+<meta property="og:title" content="Kaustubh Mani — Future AI Engineer" />
+<meta property="og:description" content="Portfolio of Kaustubh Mani, Class 12 student and aspiring AI engineer." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<!-- Loading -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-ring"></div>
+  <div class="loader-text">KM</div>
+</div>
+
+<!-- Scroll progress -->
+<div id="scroll-progress"></div>
+
+<!-- Animated background blobs -->
+<div class="bg-decor" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="grid-overlay"></div>
+</div>
+
+<!-- Mouse glow -->
+<div id="cursor-glow" aria-hidden="true"></div>
+
+<!-- Navbar -->
+<header id="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="brand">
+      <span class="brand-mark">KM</span>
+      <span class="brand-name">Kaustubh Mani</span>
+    </a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#education">Education</a>
+      <a href="#goals">Goals</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="container hero-inner">
+    <div class="hero-left reveal">
+      <span class="chip"><span class="dot"></span> Available for collaborations & hackathons</span>
+      <h1>
+        <span class="gradient-text">KAUSTUBH</span><br/>
+        <span class="gradient-text-2">MANI</span>
+      </h1>
+      <p class="hero-role">
+        I am a <span id="typed" class="typed"></span><span class="caret">|</span>
+      </p>
+      <p class="hero-desc">
+        I’m KAUSTUBH MANI, a B.Tech student passionate about AI, technology, and innovation. I enjoy building 	creative ideas, exploring modern tech, and continuously learning new skills to grow as a future engineer 	and problem solver.
+
+
+      </p>
+      <div class="cta-row">
+        <a href="#projects" class="btn btn-primary">View Portfolio</a>
+        <a href="#contact" class="btn btn-ghost">Contact Me</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>94.2%</strong><span>Class 10 Boards</span></div>
+        <div><strong>94%</strong><span>Class 12 Boards</span></div>
+        <div><strong>91.23</strong><span>JEE Main %ile</span></div>
+      </div>
+    </div>
+
+    <div class="hero-right reveal">
+      <!-- Photo placeholder -->
+      <div class="photo-card">
+        <div class="photo-frame" aria-label="Photo placeholder">
+          <div class="photo-placeholder">
+            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="9" r="3.5"/>
+              <path d="M5 19c1.5-3.5 4-5 7-5s5.5 1.5 7 5"/>
+            </svg>
+            <span>Your photo here</span>
+          </div>
+          <div class="photo-glow"></div>
+        </div>
+        <div class="floating-tag tag-1">⚡ AI</div>
+        <div class="floating-tag tag-2">{ } Code</div>
+        <div class="floating-tag tag-3">◎ Innovation</div>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-hint" aria-label="Scroll">
+    <span class="mouse"><span></span></span>
+  </a>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">01 — About</span>
+      <h2>A curious mind building toward an <span class="gradient-text">AI-driven future</span>.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="glass-card reveal">
+        <h3>Who I am</h3>
+        <p>
+          I’m currently pursuing B.Tech at Maharaja Agrasen Institute of Technology after completing my schooling 	  from CRPF Public School, Rohini with a Non-Medical + Computer Science background. My interest in 	  	  technology gradually evolved into a passion for AI, coding, and innovation.
+        </p>
+        <p>
+          Beyond academics, I enjoy sports, self-growth, and continuously learning new skills. I’m someone who 	 	  believes in consistency, adaptability, and focused effort once I commit to a goal, I give it my full 	  	  dedication.
+        </p>
+      </div>
+      <div class="about-stack">
+        <div class="glass-card mini reveal">
+          <span class="mini-label">School</span>
+          <span class="mini-value">CRPF Public School, Rohini</span>
+        </div>
+        <div class="glass-card mini reveal">
+          <span class="mini-label">Stream</span>
+          <span class="mini-value">Non-Medical + Computer Science</span>
+        </div>
+        <div class="glass-card mini reveal">
+          <span class="mini-label">Board</span>
+          <span class="mini-value">CBSE</span>
+        </div>
+        <div class="glass-card mini reveal">
+          <span class="mini-label">COLLEGE</span>
+          <span class="mini-value">UNIVERSITY SCHOOL OF AUTOMATION AND ROBOTICS</span>
+        </div>
+        <div class="glass-card mini reveal">
+          <span class="mini-label">What drives me</span>
+          <span class="mini-value">Build a future that uplifts my family & society.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">02 — Skills & Expertise</span>
+      <h2>Skills I bring &mdash; and skills I'm <span class="gradient-text">learning</span>.</h2>
+    </div>
+
+    <!-- Expertise as chips -->
+    <div class="learning-block reveal">
+      <h3 class="learning-title"><span class="gradient-text">Core Skills</span></h3>
+      <div class="chips-grid">
+        <div class="learn-chip"><span class="lc-icon">🔬</span> Tech Research</div>
+        <div class="learn-chip"><span class="lc-icon">💬</span> Communication Skills</div>
+        <div class="learn-chip"><span class="lc-icon">🌱</span> Adaptability</div>
+        <div class="learn-chip"><span class="lc-icon">✨</span> Curiosity for Innovation</div>
+        <div class="learn-chip"><span class="lc-icon">🧩</span> Problem Solving</div>
+        <div class="learn-chip"><span class="lc-icon">🤖</span> AI Tools</div>
+      </div>
+    </div>
+
+    <!-- Currently Learning -->
+    <div class="learning-block reveal">
+      <h3 class="learning-title"><span class="gradient-text">Currently Learning</span></h3>
+      <div class="chips-grid">
+        <div class="learn-chip"><span class="lc-icon">🐍</span> Python</div>
+        <div class="learn-chip"><span class="lc-icon">⚙️</span> C Programming</div>
+        <div class="learn-chip"><span class="lc-icon">🌐</span> HTML</div>
+        <div class="learn-chip"><span class="lc-icon">🎨</span> CSS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">03 — Certifications</span>
+      <h2>Proof of <span class="gradient-text">progress</span>.</h2>
+      <p class="section-sub">Click a category to view all certificates in that area.</p>
+    </div>
+    <div class="cert-grid reveal">
+      <a class="cert-btn" href="certificates.html?cat=ai" target="_blank" rel="noopener">
+        <span class="cb-icon">🤖</span><span class="cb-label">AI Tools</span><span class="cb-arrow">↗</span>
+      </a>
+      <a class="cert-btn" href="certificates.html?cat=python" target="_blank" rel="noopener">
+        <span class="cb-icon">🐍</span><span class="cb-label">Python</span><span class="cb-arrow">↗</span>
+      </a>
+      <a class="cert-btn" href="certificates.html?cat=c" target="_blank" rel="noopener">
+        <span class="cb-icon">⚙️</span><span class="cb-label">C Programming</span><span class="cb-arrow">↗</span>
+      </a>
+      <a class="cert-btn" href="certificates.html?cat=web" target="_blank" rel="noopener">
+        <span class="cb-icon">🌐</span><span class="cb-label">HTML / CSS / JS</span><span class="cb-arrow">↗</span>
+      </a>
+      <a class="cert-btn" href="certificates.html?cat=react" target="_blank" rel="noopener">
+        <span class="cb-icon">⚛️</span><span class="cb-label">React</span><span class="cb-arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">03 — Education & Achievements</span>
+      <h2>A track record built on <span class="gradient-text">consistency</span>.</h2>
+    </div>
+    
+    <div class="timeline">
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="glass-card">
+          <div class="t-top"><span class="t-year">2023 – 2024</span><span class="badge">Completed</span></div>
+          <h3>Class 10 — CBSE</h3>
+          <p>CRPF Public School, Rohini</p>
+          <div class="t-metric"><strong>94.2%</strong><span>Class 10 Boards</span></div>
+        </div>
+      </div>
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="glass-card">
+          <div class="t-top"><span class="t-year">2025 – 2026</span><span class="badge">COMPLETED</span></div>
+          <h3>Class 12 — CBSE</h3>
+          <p>CRPF Public School, Rohini · Non-Medical + Computer Science</p>
+          <div class="t-metric"><strong>94%</strong><span>Class 12 Boards</span></div>
+        </div>
+      </div>
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="glass-card">
+          <div class="t-top"><span class="t-year">2026</span><span class="badge">JEE Main</span></div>
+          <h3>JEE Main</h3>
+          <p>National-level engineering entrance examination.</p>
+          <div class="t-metric-row">
+            <div class="t-metric"><strong>91.23</strong><span>Percentile</span></div>
+            <div class="t-metric"><strong>136,284</strong><span>All India Rank</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOALS -->
+<section id="goals" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">04 — Career Goals</span>
+      <h2>Where I'm <span class="gradient-text">headed</span>.</h2>
+    </div>
+    <div class="goals-grid">
+      <div class="glass-card goal reveal">
+        <div class="goal-icon">🎓</div>
+        <h3>Computer Science Engineering</h3>
+        <p>Completing my CSE degree at a strong engineering institute and build a deep foundation in computing.</p>
+      </div>
+      <div class="glass-card goal reveal">
+        <div class="goal-icon">🤖</div>
+        <h3>AI & Future Tech</h3>
+        <p>Specialize in AI, machine learning, and emerging technologies that will define the next decade.</p>
+      </div>
+      <div class="glass-card goal reveal">
+        <div class="goal-icon">🚀</div>
+        <h3>Impactful Work</h3>
+        <p>Contribute to teams and projects that solve real problems and improve everyday lives.</p>
+      </div>
+      <div class="glass-card goal reveal">
+        <div class="goal-icon">💡</div>
+        <h3>Meaningful Projects</h3>
+        <p>Build products that are useful, thoughtful, and worth remembering.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">05 — Projects</span>
+      <h2>Things I'm planning to <span class="gradient-text">build</span>.</h2>
+    </div>
+    <div class="projects-grid">
+      <article class="glass-card project reveal">
+        <div class="project-art art-1">
+          <span class="ribbon">Coming Soon</span>
+        </div>
+        <h3>AI-Based Web Application</h3>
+        <p>A smart web app that uses AI to assist users with everyday productivity tasks.</p>
+        <div class="tags">
+          <span>React</span><span>Python</span><span>OpenAI API</span>
+        </div>
+        <div class="project-actions">
+          <a href="#" class="btn btn-mini" aria-disabled="true">GitHub</a>
+          <a href="#" class="btn btn-mini ghost" aria-disabled="true">Live Demo</a>
+        </div>
+      </article>
+
+      <article class="glass-card project reveal">
+        <div class="project-art art-2">
+          <span class="ribbon">Coming Soon</span>
+        </div>
+        <h3>Student Productivity Platform</h3>
+        <p>A platform that helps students plan, focus, and track progress across subjects.</p>
+        <div class="tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <div class="project-actions">
+          <a href="#" class="btn btn-mini" aria-disabled="true">GitHub</a>
+          <a href="#" class="btn btn-mini ghost" aria-disabled="true">Live Demo</a>
+        </div>
+      </article>
+
+      <article class="glass-card project reveal">
+        <div class="project-art art-3">
+          <span class="ribbon">Coming Soon</span>
+        </div>
+        <h3>Cybersecurity Awareness Website</h3>
+        <p>An educational site teaching students how to stay safe online with simple, practical lessons.</p>
+        <div class="tags">
+          <span>HTML</span><span>CSS</span><span>Content</span>
+        </div>
+        <div class="project-actions">
+          <a href="#" class="btn btn-mini" aria-disabled="true">GitHub</a>
+          <a href="#" class="btn btn-mini ghost" aria-disabled="true">Live Demo</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">06 — Contact</span>
+      <h2>Let's build something <span class="gradient-text">together</span>.</h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="glass-card reveal">
+        <h3>Send a message</h3>
+        <form id="contactForm">
+          <div class="row">
+            <label>Name<input name="name" type="text" placeholder="Your name" required></label>
+            <label>Email<input name="email" type="email" placeholder="you@example.com" required></label>
+          </div>
+          <label>Subject<input name="subject" type="text" placeholder="What is this about?"></label>
+          <label>Message<textarea name="message" rows="5" placeholder="Tell me a little about it..." required></textarea></label>
+          <button class="btn btn-primary" type="submit" id="contactSubmit">Send Message</button>
+          <p id="contactStatus" class="form-status" role="status"></p>
+        </form>
+      </div>
+
+      <div class="contact-side">
+        <div class="glass-card reveal">
+          <h3>Connect</h3>
+          <p class="muted">Find me on the web. Links coming soon.</p>
+          <div class="socials">
+            <a href="#" class="social" aria-label="GitHub"><span>GitHub</span></a>
+            <a href="#" class="social" aria-label="LinkedIn"><span>LinkedIn</span></a>
+            <a href="#" class="social" aria-label="Instagram"><span>Instagram</span></a>
+            <a href="#" class="social" aria-label="Twitter/X"><span>Twitter / X</span></a>
+            <a href="mailto:kaustubhmani992@gmail.com" class="social" aria-label="Email"><span>Email</span></a>
+          </div>
+        </div>
+        <div class="glass-card reveal cta-card">
+          <h3>Open to</h3>
+          <ul class="check-list">
+            <li>Collaborations on student projects</li>
+            <li>Hackathons & coding events</li>
+            <li>Mentorship & learning opportunities</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <span class="brand-mark">KM</span>
+      <p>© <span id="year"></span> Kaustubh Mani. Crafted with curiosity.</p>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="supabase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
